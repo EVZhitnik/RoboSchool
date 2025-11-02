@@ -1,0 +1,90 @@
+@use 'helpers' as *;
+
+.tabs {
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: rem(10);
+        justify-items: flex-start;
+        padding-bottom: rem(20);
+        border-bottom: var(--border);
+    }
+
+    &__button {
+        font-size: rem(20);
+        color: var(--color-line);
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        @include mobile {
+            font-size: rem(18);
+        }
+
+        @include mobile-s {
+            font-size: rem(16);
+        }
+
+        @include hover {
+            color: var(--color-dark-blue);
+        }
+
+        &.is-active {
+            color: var(--color-red);
+        }
+    }
+
+    &__body {
+        position: relative;
+        padding-top: rem(20);
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 98%;
+            height: rem(25);
+            bottom: 0;
+            left: 0;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5098039216)), color-stop(rgba(255, 255, 255, 0.5098039216)), to(rgba(255, 255, 255, 0.8509803922)));
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5098039216), rgba(255, 255, 255, 0.5098039216), rgba(255, 255, 255, 0.8509803922));
+        }
+    }
+
+    &__content {
+        display: none;
+        color: var(--color-dark-blue);
+        overflow-y: scroll;
+        height: rem(355);
+
+        
+        &.is-visible {
+            display: block;
+        }
+    }
+
+    &__heading {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+
+            @include mobile-s {
+                margin-bottom: rem(10);
+            }
+        }
+    }
+
+    &__description {
+        @include fluid-text(20, 16);
+
+        &:not(:last-child) {
+            margin-bottom: rem(40);
+
+            @include mobile-s {
+                margin-bottom: rem(20);
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

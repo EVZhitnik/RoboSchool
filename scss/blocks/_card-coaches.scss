@@ -1,0 +1,41 @@
+@use 'helpers' as *;
+
+.card-coaches {
+    display: grid;
+    row-gap: rem(20);
+
+    &__image {
+        img {
+            border-radius: rem(20);
+        }
+    }
+
+    &__text {
+        display: grid;
+        row-gap: rem(10);
+    }
+
+    &__department {
+        font-size: rem(18);
+
+        @include mobile {
+            font-size: rem(14);
+        }
+    }
+
+    &__button {
+        font-size: rem(18);
+        border: none;
+        color: var(--color-red);
+        background-color: transparent;
+        justify-self: start;
+
+        @include hover {
+            color: var(--color-dark-blue);
+        }
+
+        @include mobile-s {
+            font-size: rem(16);
+        }
+    }
+}
