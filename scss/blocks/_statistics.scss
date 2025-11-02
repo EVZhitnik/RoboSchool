@@ -1,0 +1,50 @@
+@use 'helpers' as *;
+
+.statistics {
+    &__heading {
+        @include fluid-text(30, 20);
+
+        color: var(--color-dark-blue);
+        max-width: rem(891);
+
+        @include mobile {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+
+            @include mobile {
+                margin-bottom: rem(40);
+            }
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(40);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            row-gap: rem(30);
+            text-align: center;
+        }
+    }
+
+    &__value {
+        @include fluid-text(70, 60);
+
+        font-weight: 600;
+        color: var(--color-red);
+        text-wrap: nowrap;
+    }
+}
