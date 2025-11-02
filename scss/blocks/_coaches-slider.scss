@@ -1,0 +1,45 @@
+@use 'helpers' as *;
+
+.coaches-slider {
+    &__wrapper {
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+
+            @include mobile {
+                margin-bottom: rem(40);
+            }
+        }
+    }
+
+    &__navigation {
+        position: relative;
+        height: rem(40);
+    }
+
+    &__buttons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(100);
+        height: rem(40);
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__scrollbar {
+        width: rem(360) !important;
+        height: rem(5) !important;
+        background-color: var(--color-scrollbar);
+        border-radius: rem(40);
+
+        @include mobile {
+            width: 100% !important;
+        }
+
+        &-drag {
+            background-color: var(--color-dark-blue);
+        }
+    }
+}

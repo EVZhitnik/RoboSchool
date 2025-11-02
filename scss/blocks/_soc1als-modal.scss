@@ -1,0 +1,18 @@
+@use 'helpers' as *;
+
+.soc1als-modal {
+    &__list {
+        display: flex;
+        column-gap: rem(10);
+    }
+
+    &__link {
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-red);
+                }
+            }
+        }
+    }
+}

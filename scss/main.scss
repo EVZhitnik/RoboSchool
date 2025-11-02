@@ -15,6 +15,13 @@
 @use 'blocks/heading-title';
 @use 'blocks/tooltip';
 
+@use 'blocks/coaches';
+@use 'blocks/coaches-slider';
+@use 'blocks/card-coaches';
+@use 'blocks/modal';
+@use 'blocks/soc1als-modal';
+@use 'blocks/tabs';
+
 // .header,
 // main > *:not(:last-child),
 // .footer {

@@ -1,0 +1,100 @@
+@use 'helpers' as *;
+
+.modal {
+    &__overlay {
+        @include transition(opacity, background-color, visibility);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 100;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        &.is-active {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            background-color: var(--color-overlay);
+        }
+    }
+
+    &__inner {
+        @include transition(transform, opacity, visibility);
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        z-index: 110;
+        display: grid;
+        row-gap: rem(40);
+        width: 100%;
+        max-width: rem(940);
+        padding: rem(40);
+        border-radius: rem(20);
+        background-color: var(--color-white);
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+
+        @include mobile {
+            padding: rem(20);
+            row-gap: rem(10);
+        }
+
+        &.is-active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            visibility: visible;
+
+            @include tablet {
+                transform: translate(-50%, -50%) scale(0.95);
+            }
+        }
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__person {
+        display: flex;
+        column-gap: rem(40);
+
+        @include mobile {
+            column-gap: rem(20);
+        }
+    }
+
+    &__photo {
+        img {
+            border-radius: rem(20);
+        }
+    }
+
+    &__info {
+        display: grid;
+        row-gap: rem(10);
+        align-self: start;
+    }
+
+    &__button {
+        &-close {
+            color: var(--color-text);
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            align-self: start;
+
+            @include hover {
+                color: var(--color-red);
+            }
+        }
+    }
+}
