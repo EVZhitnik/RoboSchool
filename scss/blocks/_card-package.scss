@@ -1,0 +1,52 @@
+@use 'helpers' as *;
+
+.card-package {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: rem(40);
+    height: 100%;
+
+    @include mobile-s {
+        display: grid;
+        row-gap: rem(40);
+        padding: rem(40) rem(25);
+    }
+
+    &__header {
+        font-weight: 600;
+        font-size: rem(30);
+
+        &:not(:last-child) {
+            margin-bottom: rem(83);
+
+            @include mobile-s {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__main {
+        display: grid;
+        row-gap: rem(20);
+        flex-grow: 1;
+
+        &:not(:last-child) {
+            margin-bottom: rem(52);
+
+            @include mobile-s {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: rem(50);
+    }
+
+    &__text {
+        max-width: rem(250);
+        margin: 0 auto;
+    }
+}
