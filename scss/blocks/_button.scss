@@ -1,0 +1,52 @@
+@use 'helpers' as *;
+
+.button {
+    @include flexbox(false, center, center);
+
+    font-size: rem(18);
+    color: var(--color-white);
+    background-color: var(--color-red);
+    border: none;
+    border-radius: rem(5);
+    padding: rem(25) rem(54);
+
+    @include hover {
+        color: var(--color-red);
+        background-color: var(--color-white);
+    }
+
+    &--hero {
+        justify-self: start;
+
+        @include laptop {
+            padding: rem(20) rem(30);
+        }
+
+        @include mobile {
+            order: 3;
+            width: 100%;
+            margin-top: rem(-60);
+        }
+
+        @include mobile-s {
+            padding-block: rem(17);
+        }
+    }
+
+    &--package {
+        text-wrap: nowrap;
+        padding: rem(25) rem(78);
+
+        @include mobile-s {
+            padding-block: rem(17);
+            padding-inline: 0;
+            width: 100%;
+        }
+    }
+
+    &--form {
+        padding-block: rem(19);
+        width: 100%;
+        background-color: var(--color-dark-blue);
+    }
+}
