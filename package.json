@@ -1,0 +1,22 @@
+{
+  "name": "robo-school",
+  "version": "1.0.0",
+  "description": "Robo School layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EVZhitnik/RoboSchool.git"
+  },
+  "author": "Evgeniy Zhitnik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EVZhitnik/RoboSchool/issues"
+  },
+  "homepage": "https://github.com/EVZhitnik/RoboSchool#readme",
+  "dependencies": {
+    "swiper": "^12.0.3"
+  }
+}

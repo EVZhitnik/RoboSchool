@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+
+:root {
+    --color-white: #FFFFFF;
+    --color-white-gray: #F9F9F9;
+    --color-form: #F6F6F6;
+    --color-dark-blue: #141024;
+    --color-red: #D52027;
+    --color-text: rgba(20, 16, 36, 0.7);
+    --color-line: rgba(20, 16, 36, 0.2);
+    --color-overlay: rgba(20, 16, 36, 0.1);
+    --color-scrollbar: rgba(20, 16, 36, 0.08);
+    --color-placeholder: rgba(40, 41, 68, 0.7);
+    --color-copyright: rgba(255, 255, 255, 0.7);
+
+    --border: #{rem(1)} solid var(--color-line);
+
+    --shadow: 0 #{rem(2)} #{rem(8)} 0 rgba(20, 16, 36, 0.1);
+    --shadow-form-validation: 0 0 #{rem(10)} #{rem(4)} var(--color-dark-blue);
+
+    --font-family-base: 'Jost', sans-serif;
+
+    --container-width: #{rem(1160)};
+    --container-padding-x: #{rem(10)};
+
+    --transition-duration: 0.2s;
+}
