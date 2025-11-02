@@ -1,0 +1,77 @@
+@use 'helpers' as *;
+
+.hero {
+    background-color: var(--color-dark-blue);
+
+    &__body {
+        position: relative;
+        display: flex;
+        column-gap: rem(28);
+        color: var(--color-white);
+        padding-left: calc(380 / 1920 * 100vw); 
+
+        @include laptop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            padding-inline: rem(24);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            padding-top: rem(100);
+            padding-bottom: rem(40);
+        }
+    }
+
+    &__content {
+        padding-top: rem(344);
+
+        @include laptop {
+            padding: 0;
+        }
+
+        @include mobile {
+            display: contents;
+        }
+    }
+
+    &__text {
+        display: grid;
+        row-gap: rem(20);
+
+        @include mobile {
+            order: 1;
+            row-gap: rem(10);
+            text-align: center;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(50);
+
+            @include mobile {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
+    &__description {
+        max-width: rem(478);
+
+        @include mobile {
+            max-width: rem(300);
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        padding-top: rem(162);
+        align-self: end;
+
+        @include mobile {
+            padding: 0;
+            order: 2;
+        }
+    }
+}
