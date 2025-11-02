@@ -29,8 +29,4 @@
 @use 'blocks/feedback-form';
 @use 'blocks/field';
 
-// .header,
-// main > *:not(:last-child),
-// .footer {
-//     display: none !important;
-// }
+@use 'blocks/footer';

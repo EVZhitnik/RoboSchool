@@ -1,0 +1,52 @@
+@use 'helpers' as *;
+
+.footer {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(30);
+        padding: rem(40) rem(100);
+        background-color: var(--color-dark-blue);
+
+        @include laptop {
+            padding-inline: rem(10);
+        }
+
+        @include mobile-s {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(40);
+            padding-top: rem(40);
+            padding-bottom: rem(20);
+        }
+    }
+
+    &__content {
+        display: grid;
+        row-gap: rem(5);
+
+        @include mobile-s {
+            row-gap: rem(20);
+        }
+    }
+
+    &__logo {
+        @include fluid-text(30, 18);
+
+        font-weight: 700;
+        color: var(--color-white);
+        text-transform: uppercase;
+    }
+
+    &__copyright {
+        font-size: rem(16);
+        color: var(--color-copyright);
+    }
+
+    &__tel {
+        @include fluid-text(30, 16);
+
+        font-weight: 600;
+        color: var(--color-white);
+    }
+}
