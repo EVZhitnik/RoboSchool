@@ -11,6 +11,10 @@
 
 @use 'blocks/statistics';
 
+@use 'blocks/benefit';
+@use 'blocks/heading-title';
+@use 'blocks/tooltip';
+
 // .header,
 // main > *:not(:last-child),
 // .footer {

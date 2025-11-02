@@ -1,0 +1,46 @@
+@use 'helpers' as *;
+
+.benefit {
+    background-color: var(--color-white-gray);
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: rem(40);
+
+        @include mobile {
+            column-gap: rem(20);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            row-gap: rem(30);
+        }
+    }
+
+    &__item {
+        @include mobile-s {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+
+            @include mobile-s {
+                margin-bottom: rem(10);
+            }
+        }
+    }
+
+    &__clue {
+        display: flex;
+        column-gap: rem(10);
+
+        @include mobile-s {
+            position: relative;
+            justify-content: center;
+        }
+    }
+}
