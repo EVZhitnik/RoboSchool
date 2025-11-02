@@ -1,0 +1,17 @@
+@use 'helpers' as *;
+
+.field {
+    &__input {
+        width: 100%;
+        color: var(--color-dark-blue);
+        background-color: var(--color-white);
+        border: none;
+        border-radius: rem(5);
+        padding-inline: rem(20);
+        height: rem(64);
+
+        &::placeholder {
+            color: var(--color-placeholder);
+        }
+    }
+}

@@ -864,7 +864,49 @@
                     </ul>
                 </div>
             </div>
-        </section>           
+        </section>
+        <section class="course" aria-labelledby="course-title">
+            <div class="course__inner container">
+                <h2 class="course__heading title visually-hidden" id="course-title">Курс со скидкой</h2>
+                <div class="course__body">
+                    <div class="course__content">
+                        <p class="course__text">
+                            Запишитесь на курс со скидкой 10%
+                        </p>
+                        <div class="course__description">
+                            <p>
+                                Акция действительна до 10 марта 2022 года
+                            </p>
+                        </div>
+                    </div>
+                    <div class="course__form">
+                        <form class="feedback-form" action="/">
+                            <div class="feedback-form__cell field">
+                                <label class="field__label visually-hidden" for="name"></label>
+                                <input class="field__input" id="name" placeholder="Имя" required>
+                            </div>
+                            <div class="feedback-form__cell field">
+                                <label class="field__label visually-hidden" for="tel"></label>
+                                <input 
+                                    class="field__input" 
+                                    id="tel" 
+                                    type="tel" 
+                                    placeholder="+7 (XXX) XXX XX-XX" 
+                                    maxlength="18" 
+                                    required 
+                                    data-js-phone-input
+                                >
+                            </div>
+                            <div class="feedback-form__cell field">
+                                <label class="field__label visually-hidden" for="email"></label>
+                                <input class="field__input" id="email" type="email" placeholder="E-mail" required>
+                            </div>
+                            <button class="feedback-form__button button button--form" type="submit">Оформить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>                   
     </main>
 
     <footer class="footer">
