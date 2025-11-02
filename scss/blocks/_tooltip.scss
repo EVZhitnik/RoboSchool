@@ -1,0 +1,54 @@
+@use 'helpers' as *;
+
+.tooltip {
+    position: relative;
+
+    @include mobile-s {
+        position: static;
+    }
+
+    @include hover {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        svg {
+            path:nth-child(1) {
+                fill: var(--color-red);
+            }
+        }
+    }
+
+    &::after {
+        @include transition(all);
+
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 125%;
+        left: 0;
+        padding: rem(15) rem(25);
+        border-radius: rem(5);
+        color: var(--color-dark-blue);
+        background: var(--color-white);
+        box-shadow: var(--shadow);
+        text-wrap: nowrap;
+        pointer-events: none;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+
+        @include laptop {
+            left: auto;
+            right: 0;
+        }
+
+        @include mobile-s {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-inline: rem(20);
+            font-size: rem(14);
+        }
+    }
+}

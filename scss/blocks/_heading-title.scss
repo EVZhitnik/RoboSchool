@@ -1,0 +1,12 @@
+@use 'helpers' as *;
+
+.heading-title {
+    &:not(:last-child) {
+        margin-bottom: rem(60);
+
+        @include mobile {
+            text-align: center;
+            margin-bottom: rem(40);
+        }
+    }
+}

@@ -789,4 +789,116 @@ section:nth-child(6) {
   text-wrap: nowrap;
 }
 
+.benefit {
+  background-color: var(--color-white-gray);
+}
+.benefit__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.5rem;
+}
+@media (width <= 47.99875rem) {
+  .benefit__list {
+    column-gap: 1.25rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .benefit__list {
+    grid-template-columns: 1fr;
+    row-gap: 1.875rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .benefit__item {
+    text-align: center;
+  }
+}
+.benefit__title:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+@media (width <= 30.06125rem) {
+  .benefit__title:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+.benefit__clue {
+  display: flex;
+  column-gap: 0.625rem;
+}
+@media (width <= 30.06125rem) {
+  .benefit__clue {
+    position: relative;
+    justify-content: center;
+  }
+}
+
+.heading-title:not(:last-child) {
+  margin-bottom: 3.75rem;
+}
+@media (width <= 47.99875rem) {
+  .heading-title:not(:last-child) {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.tooltip {
+  position: relative;
+}
+@media (width <= 30.06125rem) {
+  .tooltip {
+    position: static;
+  }
+}
+@media (any-hover: hover) {
+  .tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .tooltip:hover svg path:nth-child(1) {
+    fill: var(--color-red);
+  }
+}
+@media (any-hover: none) {
+  .tooltip:active::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .tooltip:active svg path:nth-child(1) {
+    fill: var(--color-red);
+  }
+}
+.tooltip::after {
+  transition: all 0.2s ease-in-out;
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 0;
+  padding: 0.9375rem 1.5625rem;
+  border-radius: 0.3125rem;
+  color: var(--color-dark-blue);
+  background: var(--color-white);
+  box-shadow: var(--shadow);
+  text-wrap: nowrap;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (width <= 90.06125rem) {
+  .tooltip::after {
+    left: auto;
+    right: 0;
+  }
+}
+@media (width <= 30.06125rem) {
+  .tooltip::after {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-inline: 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
